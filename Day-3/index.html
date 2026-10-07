@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Team</title>
+    <link rel="stylesheet" href="style.css">    
+
+    <style>
+        /* Universal */
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Element */
+        h2 {
+            color: navy
+        }
+
+        /* Class */
+        .batter {
+            background-color: lightblue;
+        }
+
+        .bowler {
+            background-color: lightcoral;
+        }
+
+        /* Id */
+        #captain {
+            background-color: gold;
+        }
+
+        /* Attribute */
+        a[target="_blank"] {
+            color: red;
+        }
+
+        input[type="text"] {
+            background-color: lightyellow;
+        }
+
+        /* Group */
+        h1, h3 {
+            color: purple;
+        }
+
+        /* Compound */
+        .batter.bench {
+            color: grey;
+        }
+
+        h3 {
+            color: white;
+            background-image: linear-gradient(to bottom, red, purple);
+        }
+    </style>
+</head>
+<body>
+    <h1>My Cricket Team</h1>
+
+    <h2>Batters</h2>
+    <p class="batter" id="captain">Subhman Gill (Captain)</p>
+    <p class="batter">Virat Kohli</p>
+    <p class="batter bench">Shreyas Iyer (bench)</p>
+
+    <h2>Bowlers</h2>
+    <p class="bowler">Jasprit Bumrah</p>
+    <p class="bowler">Mohamed Siraj</p>
+
+    <h3>Links</h3>
+    <p>
+        <a href="https.//www.bcci.tv" target="_blank">BCCI (Open in new tab)</a>
+        <a href="#captain">Go to captain</a>
+    </p>
+
+    <h3>Search</h3>
+    <p>
+        <input type="text" placeholder="Player Name">
+        <input type="checkbox"> Show bench
+    </p>
+</body>
+</html>
