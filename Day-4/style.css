@@ -1,0 +1,16 @@
+.box {
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    padding: auto;
+    margin: auto;
+    border: 2px solid black;
+}
+
+.unit {
+    width: 50vw;
+    height: 50vh;
+    border: 2px solid black;
+    background-color: aqua;
+    margin: auto;
+}

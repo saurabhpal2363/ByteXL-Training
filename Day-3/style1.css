@@ -1,0 +1,32 @@
+h1 {
+    background-image: linear-gradient(to right, orange, red);
+}
+
+h2 {
+    color: maroon;
+}
+
+ul {
+    color: green;
+}
+
+.non-veg {
+    color: red;
+}
+
+.offer {
+    background-color: yellow;
+}
+
+table, td, th {
+    border: 2px solid black;
+}
+
+tr > th {
+    color: white;
+    background-color: brown;
+}
+
+.offers {
+    color: red;
+}

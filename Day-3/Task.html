@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>Campus Cafe</h1>
+    <p>Fresh food for hungry students, every day from 9 am to 6 pm</p>
+
+    <h2>Today's Special</h2>
+    <ul>
+        <li>Masala Dosa</li>
+        <li class="offer">Paneer Tikka Roll (Chef's special)</li>
+        <li class="non-veg">Chicken Biryani</li>
+        <li>Veg Sandwich</li>
+        <li class="non-veg">Egg roll</li>
+    </ul>
+
+    <h2>Price List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Masala Dosa</td>
+                <td>$60</td>
+                <td>Veg</td>
+            </tr>
+            <tr class="offers">
+                <td>Paneer Tikka Roll</td>
+                <td>$80 (Offer $70)</td>
+                <td>Veg</td>
+            </tr>
+            <tr>
+                <td>Chicken Biryani</td>
+                <td>$120</td>
+                <td>Non-Veg</td>
+            </tr>
+            <tr class="offers">
+                <td>Cold Coffee</td>
+                <td>$50 (Offer $40)</td>
+                <td>Drink</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Order Now</h2>
+    <h3>Fill Your Detail</h3>
+    <form action="">
+        <p>
+            <label for="name">Name</label>
+            <input type="text" placeholder="Your Name" id="name">
+        </p>
+        <p>
+            <label for="phone">Phone</label>
+            <input type="tel" placeholder="10-digit Number" id="phone" pattern="[6-9][0-9]{9}">
+        </p>
+        <p>
+            <label for="item">Item</label>
+            <br>
+            <select id="items">
+                <option value="Masala Dosa">Masala Dosa</option>
+                <option value="Paneer Tikka Roll">Paneer Tikka Roll</option>
+                <option value="Chicken Biryani">Chicken Biryani</option>
+                <option value="Cold Coffee">Cold Coffee</option>
+            </select>
+        </p>
+
+        <button>Submit</button>
+    </form>
+</body>
+</html>
