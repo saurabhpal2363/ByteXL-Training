@@ -1,0 +1,32 @@
+.item {
+    background-color: orange;
+    padding: 10px;
+    margin: 5px;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.grid4 {
+    display: grid;
+    grid-template-columns: [first] 1fr [second] 1fr [third] 1fr [end];
+}
+
+.a {
+    grid-column: first / second;
+}
+
+.b {
+    grid-column: second / end;
+}
+
+.c {
+    grid-column: first / end;
+}

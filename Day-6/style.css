@@ -1,0 +1,38 @@
+.box {
+    height: 100px;
+    width: 100px;
+    background: orange;
+    margin: 20px;
+}
+
+.rotate:hover {
+    transform: rotate(45deg);
+}
+
+.scale:hover {
+    transform: scale(1.3);
+}
+
+.move:hover {
+    transform: translateX(30px);
+}
+
+.skew:hover {
+    transform: skew(20deg);
+}
+
+
+.stage {
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+}
+
+.moving:hover { 
+    transform: translate(50%, 50%);
+}
+
+
+.smooth {
+    transition: transform 0.5s;
+}
