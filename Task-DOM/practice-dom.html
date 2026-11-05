@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM practice</title>
+
+  <style>
+    .highlight {
+      background-color: lightyellow;
+    }
+  </style>
+</head>
+<body>
+  <!-- Use these elements for the exercises below. -->
+  <h1 id="heading">Old heading</h1>
+  <p id="message">Waiting</p>
+  <a id="link" href="#old">Old link</a>
+  <p id="note">Remember your notebook.</p>
+  <ul id="skills"></ul>
+  <p id="temporary">Remove me</p>
+  <p id="summary"></p>
+
+  <script>
+    // DOM PRACTICE
+    // Solve ONE task at a time. Write code below the question, then reload.
+    // Possible answers are in solutions-dom.html. Try before opening that file.
+
+    // 1. Select the element with id="heading" using getElementById.
+    //    Print its text. Expected Console: Old heading
+
+    const id = document.getElementById("heading");
+    id.innerText = "New heading";
+
+    // 2. Select the same heading using querySelector.
+    //    Change its text to JavaScript DOM. Expected page: JavaScript DOM
+
+    const id1 = document.querySelector("#heading");
+    id1.innerText = "JavaScript DOM. Expected page: JavaScript DOM";
+
+    // 3. Change #message to Welcome, Aman! using textContent.
+    
+    const message = document.querySelector("#message");
+    message.textContent = "Welcome, Aman!";
+
+    // 4. Change #link's href to #heading and its text to Go to heading.
+    //    Expected getAttribute("href"): #heading
+
+    const link = document.querySelector("#link");
+    link.setAttribute("href", "#heading");
+
+    console.log(link.getAttribute("href"));
+
+    // 5. Make #note blue using its style property.d
+
+    const note = document.querySelector("#note");
+    note.style.color = "blue";
+
+    // 6. Add the highlight class to #note, then check contains("highlight").
+    //    Expected Console: true
+    //    Remove highlight and check again. Expected Console: false
+
+    note.classList.add("highlight");
+    
+    console.log(note.classList.contains("highlight"));
+
+    note.classList.remove("highlight");
+    console.log(note.classList.contains("highlight"));
+
+    // 7. Create one li with text HTML. Append it to #skills.
+    //    Expected page: one list item, HTML
+
+    const ul = document.querySelector("#skills");
+
+    let li = document.createElement("li");
+    li.innerText = "HTML";
+    ul.appendChild(li);
+
+    // 8. Use ["CSS", "JavaScript"] and a loop to append two more list items.
+    //    Run after task 7. Expected list: HTML, CSS, JavaScript
+
+    const skill2 = ["CSS", "JavaScript"];
+
+    for(let i=0; i<skill2.length; i++) {
+      li = document.createElement("li");
+      li.innerText = skill2[i];
+      ul.appendChild(li);
+    }
+
+    // 9. Remove #temporary. Select it again and print the result.
+    //    Expected Console: null
+
+    let temp = document.querySelector("#temporary");
+    
+    temp.remove();
+
+    temp = document.querySelector("#temporary");    
+    console.log(temp);
+
+    // 10. Select #missing. If it is null, print Element not found.
+    //     Expected Console: Element not found
+
+    const miss = document.querySelector("#missing");
+
+    if(miss == null) {
+      console.log("Element not found");
+    };
+
+    // 11. Select all li elements inside #skills and print the count.
+    //     Run after tasks 7 and 8. Expected Console: 3
+
+    const len = document.querySelectorAll("li");
+
+    console.log(len.length);
+
+    // 12. Use the students below to show Passed: 2 / 3 in #summary.
+    //     Use a loop or filter. Do not hard-code the answer.
+    const students = [
+      { name: "Aman", marks: 85 },
+      { name: "Priya", marks: 39 },
+      { name: "Karan", marks: 40 }
+    ];
+
+    const passedStudents = students.filter(student => student.marks >= 40);
+
+    document.getElementById("summary").textContent = `Passed: ${passedStudents.length} / ${students.length}`;
+
+    // INTERVIEW CHECK: explain aloud.
+    // - What is the DOM?
+    // - How are querySelector and querySelectorAll different?
+    // - What does getElementById return when no element matches?
+    // - Why is this script placed after the HTML elements?
+    // - Does createElement automatically display an element?
+    // - When would you use textContent instead of innerHTML?
+  </script>
+</body>
+</html>
